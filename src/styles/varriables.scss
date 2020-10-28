@@ -1,0 +1,41 @@
+$positions: ('top', 'left', 'bottom', 'right');
+
+$activeElementBoxShadow: 0 0 4px rgba(15, 42, 141, 0.6);
+$displays: (
+        block,
+        inline-block,
+        inline,
+        flex,
+        inline-flex,
+        hidden);
+
+$directions: (
+        row,
+        row-reverse,
+        col,
+        col-reverse,
+);
+
+$aligns: (
+        stretch,
+        start,
+        center,
+        end,
+        baseline,
+);
+
+$justify: (
+        start,
+        center,
+        end,
+        between,
+        around,
+);
+
+$colorPrimary: #C4C4C4;
+$colorGraySecondary: #595959;
+$colorGrayBold: #373F41;
+
+$selectedColor: #1890ff;
+
+

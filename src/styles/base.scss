@@ -1,0 +1,287 @@
+@import './media';
+@import './varriables';
+
+* {
+  outline: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.outlined {
+  outline: 1px dashed rgba(50, 50, 50, 0.5);
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-flex-start {
+  justify-content: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-no-wrap {
+  white-space: nowrap;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+.bg-red {
+  background-color: red;
+}
+.bg-ant {
+  background-color: #f0f0f0;
+}
+.bg-ant-light {
+  background-color: #fafafa;
+}
+.bordered-standard {
+  border: 1px solid #f0f0f0;
+}
+
+.border-r-standard {
+  border-right: 1px solid #f0f0f0;
+}
+
+.bg-gray-light {
+  background-color: #c4c4c4;
+}
+.border-none {
+  border: none;
+}
+.br-radius-standard {
+  border-radius: 4px;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.c-white {
+  color: #ffffff;
+}
+.c-gray-secondary {
+  color: $colorGraySecondary;
+}
+.c-gray-bold {
+  color: $colorGrayBold;
+}
+.float-right {
+  float: right;
+}
+
+.c-black {
+  color: #000000;
+}
+
+.blue-button {
+  background-color: #e6f7ff;
+  color: #1890ff;
+  border: 1px solid #91d5ff;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.font-16 {
+  font-size: 16px !important;
+}
+
+.font-monospace {
+  font-family: monospace;
+}
+
+.font-normal {
+  font-family: normal;
+}
+
+.font-serif {
+  font-family: Serif;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.tablet-display-none {
+  @include media(tablet) {
+    display: none !important;
+  }
+}
+
+// TODO make scss generated mixins each sizes
+.xs-mr-20 {
+  @include media(xs) {
+    margin-right: 20px;
+  }
+}
+
+/* TODO make margin and padding base classes */
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.mb-0-force {
+  margin-bottom: 0 !important;
+}
+
+.min-h-100 {
+  min-height: 100%;
+}
+
+@keyframes zoomInOutAnimation {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.loading-zoom-animation {
+  animation: zoomInOutAnimation 1s infinite;
+}
+.z-5 {
+  z-index: 5;
+}
+
+.c-blue-primary {
+  color: #1890ff;
+}
+
+.guided-element {
+  box-shadow: $activeElementBoxShadow;
+}
+
+.c-gray-primary {
+  color: #262626 !important;
+}
+
+.cursor-inherit {
+  cursor: inherit;
+}
+
+// Position start
+@each $val in $positions {
+  .#{$val} {
+    @include position($val);
+  }
+}
+// Position end
+
+// Margin/Padding - Start
+@each $position in $positions {
+  @for $i from 0 through 64 {
+    @include margin($i, $position);
+    @include padding($i, $position);
+  }
+}
+// Margin/Padding - end
+
+// Height/Width - start
+@for $i from 0 through 30 {
+  .h-#{$i} {
+    height: $i * 8px;
+  }
+  .w-#{$i} {
+    width: $i * 8px;
+  }
+}
+
+// Flex - start
+@for $i from 1 through 25 {
+  .flex-#{$i} {
+    flex: #{$i};
+  }
+}
+
+@each $val in $displays {
+  .#{$val} {
+    @include display($val);
+  }
+}
+
+@each $val in $directions {
+  .flex-#{$val} {
+    @include flex-direction($val);
+  }
+}
+
+@each $val in $aligns {
+  .align-#{$val} {
+    @include align-items($val);
+  }
+}
+
+@each $val in $justify {
+  .justify-#{$val} {
+    @include justify-content($val);
+  }
+}
+
+// Flex - end

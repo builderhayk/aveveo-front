@@ -1,0 +1,12 @@
+.primary-red {
+  background-color: #FF4A4A!important;
+  padding: 9px!important;
+  outline: none;
+  border: 0px solid #fff!important;
+  outline: none!important;
+  box-shadow: none!important;
+  &:focus {
+    outline: none!important;
+    box-shadow: none!important;
+  }
+}

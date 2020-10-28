@@ -1,0 +1,82 @@
+@mixin margin($size, $position) {
+  .m#{str-slice($position, 0, 1)}-#{$size} {
+    margin-#{$position}: $size + px;
+  }
+  .m-#{$size} {
+    margin: $size + px;
+  }
+  .mx-#{$size} {
+    margin: 0 $size + px;
+  }
+  .my-#{$size} {
+    margin: $size + px 0;
+  }
+}
+
+@mixin position($value) {
+  position: $value;
+}
+
+@mixin padding($size, $position) {
+  .p#{str-slice($position, 0, 1)}-#{$size} {
+    padding-#{$position}: $size + px !important;
+  }
+  .p-#{$size} {
+    padding: $size + px;
+  }
+  .px-#{$size} {
+    padding: 0 $size + px;
+  }
+  .py-#{$size} {
+    padding: $size + px 0;
+  }
+}
+
+@mixin display($value) {
+  display: $value;
+}
+
+@mixin flex-direction($value) {
+  @if $value== 'col' {
+    flex-direction: column;
+  } @else if $value== 'col-reverse' {
+    flex-direction: column-reverse;
+  } @else {
+    flex-direction: $value;
+  }
+}
+
+@mixin align-items($value) {
+  @if $value==start or $value==end {
+    align-items: flex-#{$value};
+  } @else {
+    align-items: $value;
+  }
+}
+
+@mixin justify-content($value) {
+  @if $value==start or $value==end {
+    justify-content: flex-#{$value};
+  } @else if $value==between or $value==around {
+    justify-content: space-#{$value};
+  } @else {
+    justify-content: $value;
+  }
+}
+
+@mixin scroll-bar() {
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 10px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #C0C0C0;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+}
