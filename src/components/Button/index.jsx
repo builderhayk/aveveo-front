@@ -7,7 +7,8 @@ const StyledButton = ({children, className, ...props}) => {
         <Button
             size={props.size || "sm"}
             type={props.type || "button"}
-            className={className + " primary-red"}
+            className={(className || "") + " primary-red"}
+            {...props}
         >
             {children}
         </Button>

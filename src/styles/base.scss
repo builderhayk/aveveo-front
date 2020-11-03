@@ -225,7 +225,18 @@
 .cursor-inherit {
   cursor: inherit;
 }
-
+.ant-input:focus {
+  outline: none;
+  border: 0px!important;
+}
+.ant-input:active {
+  outline: none;
+  border: 0px!important;
+}
+.ant-input:hover {
+  outline: none;
+  border: 0px!important;
+}
 // Position start
 @each $val in $positions {
   .#{$val} {

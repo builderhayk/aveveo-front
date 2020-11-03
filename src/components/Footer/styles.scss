@@ -1,0 +1,23 @@
+.footer-items-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+  > h6 {
+    font-size: 20px;
+    > a {
+      color: #353535
+    }
+  }
+  > span {
+    font-size: 18px;
+    margin-top: 5px;
+    > a {
+      color: #828282
+    }
+  }
+}
+.footer-copyright {
+  font-size: 16px;
+  color: #828282;
+}

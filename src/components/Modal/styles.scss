@@ -1,0 +1,10 @@
+.styled-modal {
+  border-radius: 5px;
+  background-color: #fff;
+  .ant-modal-close {
+    color: #000
+  }
+  .ant-modal-header {
+    border-bottom: 0px;
+  }
+}

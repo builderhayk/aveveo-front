@@ -1,9 +1,10 @@
-.primary-red {
+.primary-red.btn {
   background-color: #FF4A4A!important;
   padding: 9px!important;
+  font-size: 18px;
+  line-height: 27px;
   outline: none;
-  border: 0px solid #fff!important;
-  outline: none!important;
+  border: 0 solid #fff!important;
   box-shadow: none!important;
   &:focus {
     outline: none!important;

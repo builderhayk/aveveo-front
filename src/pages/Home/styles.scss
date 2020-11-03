@@ -4,16 +4,87 @@
   background-size: cover;
   background-position-y: center;
   height: 630px;
+
   h1 {
     width: 30%;
     color: #fff;
     text-align: center;
   }
+  .main-page-search-wrapper {
+    width: 75%;
+    .main-page-search {
+      height: 73px;
+
+      .main-page-search-input {
+        color: #353535;
+        > span {
+          font-size: 19px;
+          font-weight: bold;
+          padding-left: 38px;
+          background-color: #fff !important;
+          border: 0px solid;
+        }
+
+      }
+      input {
+        height: inherit;
+        border: none;
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+    .search-icon {
+      font-size: 21px;
+      margin: 17px
+    }
+  }
 }
+
 .card.landing-page-card {
   border-radius: 5px;
-  border: 0px solid ;
+  border: 0px solid;
+
   &:hover {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
   }
+}
+
+.card-img-wrapper {
+  width: inherit;
+  max-height: 243px;
+   > img {
+     width: inherit;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position-y: center;
+   }
+  > div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > span {
+      font-size: 21px;
+      color: white;
+      position: absolute;
+    }
+  }
+}
+.service-card-meta {
+  .service-card-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.service-card-description {
+  width: 100%;
+  text-align: left;
 }
