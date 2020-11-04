@@ -1,0 +1,7 @@
+export const GET_LOGGED_IN_USER = "GET_LOGGED_IN_USER";
+export const GET_LOGGED_IN_USER_SUCCESS = "GET_LOGGED_IN_USER_SUCCESS";
+export const GET_LOGGED_IN_USER_FAIL = "GET_LOGGED_IN_USER_FAIL";
+
+export const LOG_IN = "LOG_IN";
+export const LOG_IN_SUCCESS= "LOG_IN_SUCCESS";
+export const LOG_IN_FAIL = "LOG_IN_FAIL";
